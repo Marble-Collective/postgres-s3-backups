@@ -8,7 +8,7 @@ services:
     dockerfilePath: ./Dockerfile
     autoDeploy: false
     envVars:
-      - key: postgresql://db_dvg6_user:hLxqMOMX1yQ9HmNndeM7UDimCGaEmG8X@dpg-cdl4clkgqg43pc58b18g-a/db_dvg6
+      - key: DATABASE_URL
         fromDatabase:
           name: db
           property: connectionString
@@ -25,7 +25,7 @@ services:
         sync: false
       - key: AWS_SECRET_ACCESS_KEY
         sync: false
-      # Postgres version of your Postgres instance 
+      # Postgres version of your Postgres instance
       # For example, 16
       - key: POSTGRES_VERSION
         sync: false
